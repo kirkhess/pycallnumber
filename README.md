@@ -418,7 +418,7 @@ class MyLC(pycn.units.LC):
     def for_print(self):
         lcclass = '{}{}'.format(str(self.classification.letters).upper(),
                                 self.classification.number)
-        cutters = ['{}{}'.format(str(c.letters.upper()), c.number)
+        cutters = ['{}{}'.format(str(c.letters).upper(), c.number)
                    for c in self.cutters]
         output = '{} .{}'.format(lcclass, ' '.join(cutters))
         if self.edition is not None:
